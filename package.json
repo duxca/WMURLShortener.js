@@ -1,0 +1,61 @@
+{
+  "name":           "legokichi.urlshortener.js",
+  "version":        "0.0.1",
+  "description":    "URL Shortener using goo.gl.",
+  "url":            "https://github.com/legokichi/URLShortener.js",
+  "keywords":       ["WebModule", "Unstable"],
+  "repository": {
+    "type":         "git",
+    "url":          "https://github.com/legokichi/URLShortener.js.git"
+  },
+  "scripts": {
+    "watch":        "node node_modules/uupaa.watch.js --verbose --action build",
+    "build":        "node node_modules/uupaa.minify.js --verbose --strict --keep --pretty",
+    "build-simple": "node node_modules/uupaa.minify.js --verbose --strict --keep --pretty --nowrap --simple",
+    "build-release":"node node_modules/uupaa.minify.js --verbose --strict --module",
+    "test":         "npm run test-node; npm run test-browser; npm run test-sim",
+    "test-page":    "node node_modules/uupaa.test.js/bin/TestPage.js --verbose",
+    "test-debug":   "NODE_ENV=production NODE_PATH=lib node --debug-brk --harmony test/index.node.js",
+    "test-node":    "NODE_ENV=production NODE_PATH=lib node --harmony test/index.node.js",
+    "test-browser": "open test/index.html",
+    "test-sim":     "node node_modules/uupaa.iphonesimulator.js --run --port 8585 --xcache --open test/index.html",
+    "server":       "http-server -c-1 -p 8585 &",
+    "server-stop":  "",
+    "server-kill":  "killall -- node /usr/local/bin/http-server -p 8585 ; exit 0",
+    "lint":         "node node_modules/uupaa.plato.js; open lint/plato/index.html"
+  },
+  "x-build": {
+    "source":       ["lib/URLShortener.js"],
+    "output":       "release/URLShortener.min.js",
+    "target":       ["all"],
+    "label":        [
+      "Browser",
+      "Worker"
+    ],
+    "module": {
+      "develop":    [],
+      "release":    ["uupaa.proxy.js"]
+    }
+  },
+  "dependencies": {
+    "uupaa.proxy.js": ""
+  },
+  "devDependencies": {
+    "uupaa.nodemodule.js": "",
+    "uupaa.reflection.js": "",
+    "uupaa.iphonesimulator.js": "",
+    "uupaa.console.js": "",
+    "uupaa.valid.js":   "",
+    "uupaa.help.js":    "",
+    "uupaa.task.js":    "",
+    "uupaa.test.js":    "",
+    "uupaa.watch.js":   "",
+    "uupaa.plato.js":   "",
+    "uupaa.minify.js":  ""
+  },
+  "lib":            "./lib/",
+  "main":           "./index.js",
+  "author":         "legokichi <legokichi@gmail.com>",
+  "license":        "MIT",
+  "contributors":   []
+}
