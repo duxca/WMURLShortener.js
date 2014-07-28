@@ -33,7 +33,7 @@
       "Worker"
     ],
     "module": {
-      "develop":    [],
+      "develop":    ["uupaa.valid.js"],
       "release":    ["uupaa.proxy.js"]
     }
   },
