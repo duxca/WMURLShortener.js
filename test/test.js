@@ -37,8 +37,8 @@ function test_URLShortener_shorten_success(test, pass, miss) {
 function test_URLShortener_shorten_failure(test, pass, miss) {
     var originalUrl = "data:base64,aaaaaa==";
     new URLShortener().shorten(originalUrl, function(err, shortUrl) {
-        Valid(Valid.type(err, "Error|null"), test_URLShortener_shorten_success, "err");
-        Valid(Valid.type(shortUrl, "String"), test_URLShortener_shorten_success, "shortUrl");
+        Valid(Valid.type(err, "Error|null"), test_URLShortener_shorten_failure, "err");
+        Valid(Valid.type(shortUrl, "String"), test_URLShortener_shorten_failure, "shortUrl");
         if(!!err){
             test.done(pass(err));
         }else{
@@ -51,8 +51,8 @@ function test_URLShortener_expand_success(test, pass, miss) {
     var originalUrl = "http://a.b/#aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
     var shortUrl = "http://goo.gl/khprIK";
     new URLShortener().expand(shortUrl, function(err, longUrl) {
-        Valid(Valid.type(err, "Error|null"), test_URLShortener_shorten_success, "err");
-        Valid(Valid.type(longUrl, "String"), test_URLShortener_shorten_success, "longUrl");
+        Valid(Valid.type(err, "Error|null"), test_URLShortener_expand_success, "err");
+        Valid(Valid.type(longUrl, "String"), test_URLShortener_expand_success, "longUrl");
         if(!!err){
             test.done(miss(err));
         } else if (longUrl === originalUrl) {
@@ -66,8 +66,8 @@ function test_URLShortener_expand_success(test, pass, miss) {
 function test_URLShortener_expand_failure(test, pass, miss) {
     var originalUrl = "http://github.com/";
     new URLShortener().expand(originalUrl, function(err, longUrl) {
-        Valid(Valid.type(err, "Error|null"), test_URLShortener_shorten_success, "err");
-        Valid(Valid.type(longUrl, "String"), test_URLShortener_shorten_success, "longUrl");
+        Valid(Valid.type(err, "Error|null"), test_URLShortener_expand_failure, "err");
+        Valid(Valid.type(longUrl, "String"), test_URLShortener_expand_failure, "longUrl");
         if(!!err){
             test.done(pass(err));
         }else{
