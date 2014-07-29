@@ -1,9 +1,9 @@
 {
   "name":           "legokichi.urlshortener.js",
-  "version":        "0.0.2",
+  "version":        "0.1.0",
   "description":    "URL Shortener using goo.gl.",
   "url":            "https://github.com/legokichi/URLShortener.js",
-  "keywords":       ["WebModule", "Unstable"],
+  "keywords":       ["legokichi", "WebModule", "Unstable"],
   "repository": {
     "type":         "git",
     "url":          "https://github.com/legokichi/URLShortener.js.git"

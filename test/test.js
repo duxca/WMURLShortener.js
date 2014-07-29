@@ -12,28 +12,60 @@ return new Test("URLShortener", {
         button:     true,
         both:       true, // test the primary module and secondary module
     }).add([
-        testIntegration,
+        test_URLShortener_shorten_success,
+        test_URLShortener_shorten_failure,
+        test_URLShortener_expand_success,
+        test_URLShortener_expand_failure,
     ]).run().clone();
 
 
-function testIntegration(test, pass, miss) {
-    var originalUrl = "http://a.b/#aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
-    new URLShortener().shorten(originalUrl, function(shortUrl) {
-        console.log(shortUrl);
-        if (/^http\:\/\/goo.gl\/[a-zA-Z0-9]{4}/.test(shortUrl)) {
-            new URLShortener().expand(shortUrl, function(longUrl) {
-                console.log(longUrl);
-                if (longUrl === originalUrl) {
-                    test.done(pass());
-                } else {
-                    test.done(miss());
-                }
-            });
-        } else {
-            test.done(miss());
+function test_URLShortener_shorten_success(test, pass, miss) {
+    var originalUrl = "http://a.b/?a=0&b=1#ab";
+    new URLShortener().shorten(originalUrl, function(err, shortUrl) {
+        if(!!err){
+            test.done(miss(err));
+        }else if(/http\:\/\/goo\.gl\/.+/.test(shortUrl)){
+            test.done(pass(shortUrl));
+        }else{
+            test.done(miss(shortUrl));
         }
     });
-};
+}
 
+function test_URLShortener_shorten_failure(test, pass, miss) {
+    var originalUrl = "data:base64,aaaaaa==";
+    new URLShortener().shorten(originalUrl, function(err, shortUrl) {
+        if(!!err){
+            test.done(pass(err));
+        }else{
+            test.done(miss(shortUrl));
+        }
+    });
+}
+
+function test_URLShortener_expand_success(test, pass, miss) {
+    var originalUrl = "http://a.b/#aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
+    var shortUrl = "http://goo.gl/khprIK";
+    new URLShortener().expand(shortUrl, function(err, longUrl) {
+        if(!!err){
+            test.done(miss(err));
+        } else if (longUrl === originalUrl) {
+            test.done(pass(longUrl));
+        } else {
+            test.done(miss(longUrl));
+        }
+    });
+}
+
+function test_URLShortener_expand_failure(test, pass, miss) {
+    var originalUrl = "http://github.com/";
+    new URLShortener().expand(originalUrl, function(err, longUrl) {
+        if(!!err){
+            test.done(pass(err));
+        }else{
+            test.done(miss(longUrl));
+        }
+    });
+}
 
 })((this || 0).self || global);
