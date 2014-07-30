@@ -1,6 +1,6 @@
 {
   "name":           "legokichi.urlshortener.js",
-  "version":        "1.0.1",
+  "version":        "1.0.2",
   "description":    "URL Shortener using goo.gl.",
   "url":            "https://github.com/legokichi/URLShortener.js",
   "keywords":       ["legokichi", "WebModule", "Unstable"],
@@ -13,7 +13,7 @@
     "build":        "node node_modules/uupaa.minify.js --verbose --strict --keep --pretty",
     "build-simple": "node node_modules/uupaa.minify.js --verbose --strict --keep --pretty --nowrap --simple",
     "build-release":"node node_modules/uupaa.minify.js --verbose --strict --module",
-    "test":         "npm run test-node; npm run test-browser; npm run test-sim",
+    "test":         "npm run test-node; npm run test-browser",
     "test-page":    "node node_modules/uupaa.test.js/bin/TestPage.js --verbose",
     "test-debug":   "NODE_ENV=production NODE_PATH=lib node --debug-brk --harmony test/index.node.js",
     "test-node":    "NODE_ENV=production NODE_PATH=lib node --harmony test/index.node.js",
@@ -27,11 +27,8 @@
   "x-build": {
     "source":       ["lib/URLShortener.js"],
     "output":       "release/URLShortener.min.js",
-    "target":       ["all"],
-    "label":        [
-      "Browser",
-      "Worker"
-    ],
+    "target":       ["Browser", "Worker"],
+    "label":        ["@dev"],
     "module": {
       "develop":    ["uupaa.valid.js"],
       "release":    ["uupaa.proxy.js"]
