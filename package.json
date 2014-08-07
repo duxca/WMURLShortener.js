@@ -31,11 +31,10 @@
     "label":        ["@dev"],
     "module": {
       "develop":    ["uupaa.valid.js"],
-      "release":    ["uupaa.proxy.js"]
+      "release":    []
     }
   },
   "dependencies": {
-    "uupaa.proxy.js": ""
   },
   "devDependencies": {
     "uupaa.nodemodule.js": "",

@@ -51,6 +51,7 @@ function test_URLShortener_expand_success(test, pass, miss) {
     var originalUrl = "http://a.b/#aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
     var shortUrl = "http://goo.gl/khprIK";
     new URLShortener().expand(shortUrl, function(err, longUrl) {
+        console.log(err, longUrl);
         Valid(Valid.type(err, "Error|null"), test_URLShortener_expand_success, "err");
         Valid(Valid.type(longUrl, "String"), test_URLShortener_expand_success, "longUrl");
         if(!!err){
