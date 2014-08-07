@@ -25,7 +25,7 @@ function test_URLShortener_shorten_success(test, pass, miss) {
         Valid(Valid.type(err, "Error|null"), test_URLShortener_shorten_success, "err");
         Valid(Valid.type(shortUrl, "String"), test_URLShortener_shorten_success, "shortUrl");
         if(!!err){
-            test.done(miss(err));
+            test.done(miss(err.message));
         }else if(/http\:\/\/goo\.gl\/.+/.test(shortUrl)){
             test.done(pass(shortUrl));
         }else{
@@ -40,7 +40,7 @@ function test_URLShortener_shorten_failure(test, pass, miss) {
         Valid(Valid.type(err, "Error|null"), test_URLShortener_shorten_failure, "err");
         Valid(Valid.type(shortUrl, "String"), test_URLShortener_shorten_failure, "shortUrl");
         if(!!err){
-            test.done(pass(err));
+            test.done(pass(err.message));
         }else{
             test.done(miss(shortUrl));
         }
@@ -55,7 +55,7 @@ function test_URLShortener_expand_success(test, pass, miss) {
         Valid(Valid.type(err, "Error|null"), test_URLShortener_expand_success, "err");
         Valid(Valid.type(longUrl, "String"), test_URLShortener_expand_success, "longUrl");
         if(!!err){
-            test.done(miss(err));
+            test.done(miss(err.message));
         } else if (longUrl === originalUrl) {
             test.done(pass(longUrl));
         } else {
@@ -70,7 +70,7 @@ function test_URLShortener_expand_failure(test, pass, miss) {
         Valid(Valid.type(err, "Error|null"), test_URLShortener_expand_failure, "err");
         Valid(Valid.type(longUrl, "String"), test_URLShortener_expand_failure, "longUrl");
         if(!!err){
-            test.done(pass(err));
+            test.done(pass(err.message));
         }else{
             test.done(miss(longUrl));
         }
