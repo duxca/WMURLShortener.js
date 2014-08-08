@@ -12,13 +12,9 @@ onmessage = function(event) {
     importScripts(MESSAGE.BASE_DIR + "../node_modules/uupaa.valid.js/lib/Valid.js");
     importScripts(MESSAGE.BASE_DIR + "../node_modules/uupaa.task.js/lib/Task.js");
     importScripts(MESSAGE.BASE_DIR + "../node_modules/uupaa.test.js/lib/Test.js");
-    importScripts(MESSAGE.BASE_DIR + "../node_modules/uupaa.proxy.js/node_modules/uupaa.eventlistener.js/lib/EventListener.js");
-    importScripts(MESSAGE.BASE_DIR + "../node_modules/uupaa.proxy.js/node_modules/uupaa.datatype.js/lib/DataType.js");
-    importScripts(MESSAGE.BASE_DIR + "../node_modules/uupaa.proxy.js/node_modules/uupaa.uri.js/lib/URI.js");
-    importScripts(MESSAGE.BASE_DIR + "../node_modules/uupaa.proxy.js/lib/Proxy.js");
-    importScripts(MESSAGE.BASE_DIR + "../lib/URLShortener.js");
-    importScripts(MESSAGE.BASE_DIR + "../release/URLShortener.min.js");
-    importScripts(MESSAGE.BASE_DIR + "./test.js?_=1407402958942");
+    importScripts(MESSAGE.BASE_DIR + "../lib/WebModule.URLShortener.js");
+    importScripts(MESSAGE.BASE_DIR + "../release/WebModule.URLShortener.min.js");
+    importScripts(MESSAGE.BASE_DIR + "./test.js?_=1407473288913");
 
     self.postMessage({ error: self.errorMessage || "" });
 };
@@ -30,12 +26,8 @@ onmessage = function(event) {
 <script src="../node_modules/uupaa.valid.js/lib/Valid.js"></script>
 <script src="../node_modules/uupaa.task.js/lib/Task.js"></script>
 <script src="../node_modules/uupaa.test.js/lib/Test.js"></script>
-<script src="../node_modules/uupaa.proxy.js/node_modules/uupaa.eventlistener.js/lib/EventListener.js"></script>
-<script src="../node_modules/uupaa.proxy.js/node_modules/uupaa.datatype.js/lib/DataType.js"></script>
-<script src="../node_modules/uupaa.proxy.js/node_modules/uupaa.uri.js/lib/URI.js"></script>
-<script src="../node_modules/uupaa.proxy.js/lib/Proxy.js"></script>
-<script src="../lib/URLShortener.js"></script>
-<script src="../release/URLShortener.min.js"></script>
-<script src="./test.js?=_1407402958943"></script>
+<script src="../lib/WebModule.URLShortener.js"></script>
+<script src="../release/WebModule.URLShortener.min.js"></script>
+<script src="./test.js?=_1407473288913"></script>
 
 </body></html>

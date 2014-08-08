@@ -1,4 +1,4 @@
-# URLShortener.js [![Build Status](https://api.travis-ci.org/legokichi/URLShortener.js.png)](http://travis-ci.org/legokichi/URLShortener.js)
+# URLShortener.js [![Build Status](https://api.travis-ci.org/legokichi/WebModule.URLShortener.js.png)](http://travis-ci.org/legokichi/WebModule.URLShortener.js)
 
 [![npm](https://nodei.co/npm/legokichi.urlshortener.js.png?downloads=true&stars=true)](https://nodei.co/npm/legokichi.urlshortener.js/)
 
@@ -6,7 +6,7 @@ URL Shortener using [goo.gl](http://goo.gl/).
 
 ## Document
 
-- [URLShortener.js wiki](https://github.com/legokichi/URLShortener.js/wiki/URLShortener)
+- [WebModule.URLShortener.js wiki](https://github.com/legokichi/WebModule.URLShortener.js/wiki/URLShortener)
 - [Development](https://github.com/uupaa/WebModule/wiki/Development)
 - [WebModule](https://github.com/uupaa/WebModule) ([Slide](http://uupaa.github.io/Slide/slide/WebModule/index.html))
 
@@ -16,9 +16,9 @@ URL Shortener using [goo.gl](http://goo.gl/).
 ### Browser
 
 ```js
-<script src="lib/URLShortener.js"></script>
+<script src="lib/WebModule.URLShortener.js"></script>
 <script>
-new URLShortener().shorten(longUrl, function(err, shortUrl){
+new WebModule.URLShortener().shorten(longUrl, function(err, shortUrl){
   console.log(shortUrl);
 });
 </script>
@@ -27,9 +27,9 @@ new URLShortener().shorten(longUrl, function(err, shortUrl){
 ### WebWorkers
 
 ```js
-importScripts("lib/URLShortener.js");
+importScripts("lib/WebModule.URLShortener.js");
 
-new URLShortener().shorten(longUrl, function(err, shortUrl){
+new WebModule.URLShortener().shorten(longUrl, function(err, shortUrl){
   console.log(shortUrl);
 });
 ```
