@@ -18,7 +18,8 @@ URL Shortener using [goo.gl](http://goo.gl/).
 ```js
 <script src="lib/WebModule.URLShortener.js"></script>
 <script>
-new WebModule.URLShortener().shorten(longUrl, function(err, shortUrl){
+var URLShortener = WebModule.URLShortener;
+new URLShortener().shorten(longUrl, function(err, shortUrl){
   console.log(shortUrl);
 });
 </script>
@@ -29,7 +30,8 @@ new WebModule.URLShortener().shorten(longUrl, function(err, shortUrl){
 ```js
 importScripts("lib/WebModule.URLShortener.js");
 
-new WebModule.URLShortener().shorten(longUrl, function(err, shortUrl){
+var URLShortener = WebModule.URLShortener;
+new URLShortener().shorten(longUrl, function(err, shortUrl){
   console.log(shortUrl);
 });
 ```
