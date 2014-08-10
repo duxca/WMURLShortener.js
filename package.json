@@ -1,6 +1,6 @@
 {
   "name":           "legokichi.wmurlshortener.js",
-  "version":        "1.2.0",
+  "version":        "1.2.1",
   "description":    "URL Shortener using goo.gl.",
   "url":            "https://github.com/legokichi/WMURLShortener.js",
   "keywords":       ["legokichi", "WebModule", "Unstable"],
