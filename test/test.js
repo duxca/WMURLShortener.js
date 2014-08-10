@@ -4,7 +4,7 @@ var _runOnNode = "process" in global;
 var _runOnWorker = "WorkerLocation" in global;
 var _runOnBrowser = "document" in global;
 
-var URLShortener = WebModule.URLShortener;
+var URLShortener = WMURLShortener;
 
 return new Test("URLShortener", {
         disable:    false,
