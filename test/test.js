@@ -10,9 +10,9 @@ return new Test("URLShortener", {
         disable:    false,
         browser:    true,
         worker:     true,
-        node:       true,
+        node:       false,
         button:     true,
-        both:       true, // test the primary module and secondary module
+        both:       false, // test the primary module and secondary module
     }).add([
         test_URLShortener_shorten_success,
         test_URLShortener_shorten_failure,
