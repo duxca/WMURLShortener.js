@@ -12,9 +12,13 @@ onmessage = function(event) {
     importScripts(MESSAGE.BASE_DIR + "../node_modules/uupaa.valid.js/lib/Valid.js");
     importScripts(MESSAGE.BASE_DIR + "../node_modules/uupaa.task.js/lib/Task.js");
     importScripts(MESSAGE.BASE_DIR + "../node_modules/uupaa.test.js/lib/Test.js");
+    importScripts(MESSAGE.BASE_DIR + "../node_modules/uupaa.xhrproxy.js/node_modules/uupaa.wmevent.js/lib/WMEvent.js");
+    importScripts(MESSAGE.BASE_DIR + "../node_modules/uupaa.xhrproxy.js/node_modules/uupaa.datatype.js/lib/DataType.js");
+    importScripts(MESSAGE.BASE_DIR + "../node_modules/uupaa.xhrproxy.js/node_modules/uupaa.wmurl.js/lib/WMURL.js");
+    importScripts(MESSAGE.BASE_DIR + "../node_modules/uupaa.xhrproxy.js/lib/XHRProxy.js");
     importScripts(MESSAGE.BASE_DIR + "../lib/WMURLShortener.js");
     importScripts(MESSAGE.BASE_DIR + "../release/WMURLShortener.min.js");
-    importScripts(MESSAGE.BASE_DIR + "./test.js?_=1407670166823");
+    importScripts(MESSAGE.BASE_DIR + "./test.js?_=1410279409564");
 
     self.postMessage({ error: self.errorMessage || "" });
 };
@@ -26,8 +30,12 @@ onmessage = function(event) {
 <script src="../node_modules/uupaa.valid.js/lib/Valid.js"></script>
 <script src="../node_modules/uupaa.task.js/lib/Task.js"></script>
 <script src="../node_modules/uupaa.test.js/lib/Test.js"></script>
+<script src="../node_modules/uupaa.xhrproxy.js/node_modules/uupaa.wmevent.js/lib/WMEvent.js"></script>
+<script src="../node_modules/uupaa.xhrproxy.js/node_modules/uupaa.datatype.js/lib/DataType.js"></script>
+<script src="../node_modules/uupaa.xhrproxy.js/node_modules/uupaa.wmurl.js/lib/WMURL.js"></script>
+<script src="../node_modules/uupaa.xhrproxy.js/lib/XHRProxy.js"></script>
 <script src="../lib/WMURLShortener.js"></script>
 <script src="../release/WMURLShortener.min.js"></script>
-<script src="./test.js?=_1407670166823"></script>
+<script src="./test.js?=_1410279409564"></script>
 
 </body></html>

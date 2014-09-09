@@ -10,7 +10,7 @@ return new Test("URLShortener", {
         disable:    false,
         browser:    true,
         worker:     true,
-        node:       false,
+        node:       true,
         button:     true,
         both:       true, // test the primary module and secondary module
     }).add([
