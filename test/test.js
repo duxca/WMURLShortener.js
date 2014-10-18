@@ -10,7 +10,7 @@ return new Test("WMURLShortener", {
         worker:     true,
         node:       true,
         button:     true,
-        both:       true, // test the primary module and secondary module
+        both:       false, // test the primary module and secondary module
     }).add([
         test_WMURLShortener_shorten_success,
         test_WMURLShortener_shorten_failure,
