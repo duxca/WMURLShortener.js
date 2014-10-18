@@ -1,6 +1,6 @@
 {
   "name":           "duxca.wmurlshortener.js",
-  "version":        "1.4.0",
+  "version":        "1.4.1",
   "description":    "My first WebModule.",
   "url":            "https://github.com/duxca/WMURLShortener.js",
   "keywords":       ["duxca", "WebModule", "Unstable"],
