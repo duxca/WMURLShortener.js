@@ -18,46 +18,46 @@
               "physical": 97,
               "logical": 48
             },
-            "cyclomatic": 10,
+            "cyclomatic": 11,
             "halstead": {
               "operators": {
                 "distinct": 19,
-                "total": 128,
+                "total": 130,
                 "identifiers": [
                   "__stripped__"
                 ]
               },
               "operands": {
-                "distinct": 61,
-                "total": 168,
+                "distinct": 63,
+                "total": 170,
                 "identifiers": [
                   "__stripped__"
                 ]
               },
-              "length": 296,
-              "vocabulary": 80,
-              "difficulty": 26.163934426229506,
-              "volume": 1871.2907160866591,
-              "effort": 48960.327588103406,
-              "bugs": 0.6237635720288863,
-              "time": 2720.018199339078
+              "length": 300,
+              "vocabulary": 82,
+              "difficulty": 25.634920634920636,
+              "volume": 1907.2656013854255,
+              "effort": 48892.60232122956,
+              "bugs": 0.6357552004618084,
+              "time": 2716.2556845127533
             },
             "params": 7
           }
         },
         "module": "lib/WMURLShortener.js",
-        "maintainability": 67.63346088572112
+        "maintainability": 67.49499158237712
       }
     }
   ],
   "summary": {
     "total": {
       "sloc": 97,
-      "maintainability": 67.63346088572112
+      "maintainability": 67.49499158237712
     },
     "average": {
       "sloc": 97,
-      "maintainability": "67.63"
+      "maintainability": "67.49"
     }
   }
 }

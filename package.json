@@ -1,14 +1,15 @@
 {
-  "name":           "legokichi.wmurlshortener.js",
-  "version":        "1.2.1",
-  "description":    "URL Shortener using goo.gl.",
-  "url":            "https://github.com/legokichi/WMURLShortener.js",
-  "keywords":       ["legokichi", "WebModule", "Unstable"],
+  "name":           "duxca.wmurlshortener.js",
+  "version":        "1.4.0",
+  "description":    "My first WebModule.",
+  "url":            "https://github.com/duxca/WMURLShortener.js",
+  "keywords":       ["duxca", "WebModule", "Unstable"],
   "repository": {
     "type":         "git",
-    "url":          "https://github.com/legokichi/WMURLShortener.js.git"
+    "url":          "https://github.com/duxca/WMURLShortener.js.git"
   },
   "scripts": {
+    "init":         "npm update; npm run build; npm run test-page",
     "watch":        "node node_modules/uupaa.watch.js --verbose --action build",
     "build":        "node node_modules/uupaa.minify.js --verbose --strict --keep --pretty",
     "build-simple": "node node_modules/uupaa.minify.js --verbose --strict --keep --pretty --nowrap --simple",
@@ -22,19 +23,23 @@
     "server":       "http-server -c-1 -p 8585 &",
     "server-stop":  "",
     "server-kill":  "killall -- node /usr/local/bin/http-server -p 8585 ; exit 0",
-    "lint":         "node node_modules/uupaa.plato.js; open lint/plato/index.html"
+    "patch":        "node node_modules/uupaa.webmoduleutility.js/index.js --patched",
+    "hint":         "jshint lib/*.js",
+    "lint":         "npm run coverage",
+    "coverage":     "node node_modules/uupaa.plato.js; open lint/plato/index.html"
   },
   "x-build": {
     "source":       ["lib/WMURLShortener.js"],
     "output":       "release/WMURLShortener.min.js",
-    "target":       ["Browser", "Worker"],
+    "target":       ["all"],
     "label":        ["@dev"],
     "module": {
       "develop":    ["uupaa.valid.js"],
-      "release":    []
+      "release":    ["uupaa.xhrproxy.js"]
     }
   },
   "dependencies": {
+    "uupaa.xhrproxy.js": ""
   },
   "devDependencies": {
     "uupaa.nodemodule.js": "",
@@ -47,11 +52,12 @@
     "uupaa.test.js":    "",
     "uupaa.watch.js":   "",
     "uupaa.plato.js":   "",
-    "uupaa.minify.js":  ""
+    "uupaa.minify.js":  "",
+    "uupaa.webmoduleutility.js": ""
   },
   "lib":            "./lib/",
   "main":           "./index.js",
-  "author":         "legokichi <legokichi@gmail.com>",
+  "author":         "duxca",
   "license":        "MIT",
   "contributors":   []
 }
