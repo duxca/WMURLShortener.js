@@ -28,36 +28,36 @@ __report = {
                 ]
               },
               "operands": {
-                "distinct": 77,
+                "distinct": 78,
                 "total": 260,
                 "identifiers": [
                   "__stripped__"
                 ]
               },
               "length": 471,
-              "vocabulary": 99,
-              "difficulty": 37.14285714285714,
-              "volume": 3122.426968057496,
-              "effort": 115975.85881356413,
-              "bugs": 1.0408089893524988,
-              "time": 6443.10326742023
+              "vocabulary": 100,
+              "difficulty": 36.66666666666667,
+              "volume": 3129.2562653838954,
+              "effort": 114739.39639740951,
+              "bugs": 1.0430854217946317,
+              "time": 6374.410910967195
             },
             "params": 8
           }
         },
         "module": "lib/WMURLShortener.js",
-        "maintainability": 66.95720935048107
+        "maintainability": 67.00267904468714
       }
     }
   ],
   "summary": {
     "total": {
       "sloc": 135,
-      "maintainability": 66.95720935048107
+      "maintainability": 67.00267904468714
     },
     "average": {
       "sloc": 135,
-      "maintainability": "66.96"
+      "maintainability": "67.00"
     }
   }
 }
