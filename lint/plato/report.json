@@ -46,18 +46,18 @@
           }
         },
         "module": "lib/WMURLShortener.js",
-        "maintainability": 67.03445764166061
+        "maintainability": 67.00874439308626
       }
     }
   ],
   "summary": {
     "total": {
       "sloc": 135,
-      "maintainability": 67.03445764166061
+      "maintainability": 67.00874439308626
     },
     "average": {
       "sloc": 135,
-      "maintainability": "67.03"
+      "maintainability": "67.01"
     }
   }
 }
