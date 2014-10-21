@@ -15,49 +15,49 @@
           "line": 1,
           "complexity": {
             "sloc": {
-              "physical": 104,
-              "logical": 48
+              "physical": 114,
+              "logical": 60
             },
-            "cyclomatic": 11,
+            "cyclomatic": 15,
             "halstead": {
               "operators": {
-                "distinct": 19,
-                "total": 130,
+                "distinct": 21,
+                "total": 165,
                 "identifiers": [
                   "__stripped__"
                 ]
               },
               "operands": {
-                "distinct": 63,
-                "total": 170,
+                "distinct": 70,
+                "total": 209,
                 "identifiers": [
                   "__stripped__"
                 ]
               },
-              "length": 300,
-              "vocabulary": 82,
-              "difficulty": 25.634920634920636,
-              "volume": 1907.2656013854255,
-              "effort": 48892.60232122956,
-              "bugs": 0.6357552004618084,
-              "time": 2716.2556845127533
+              "length": 374,
+              "vocabulary": 91,
+              "difficulty": 31.35,
+              "volume": 2433.9151954343124,
+              "effort": 76303.2413768657,
+              "bugs": 0.8113050651447709,
+              "time": 4239.068965381428
             },
-            "params": 7
+            "params": 8
           }
         },
         "module": "lib/WMURLShortener.js",
-        "maintainability": 67.49499158237712
+        "maintainability": 64.59031048838443
       }
     }
   ],
   "summary": {
     "total": {
-      "sloc": 104,
-      "maintainability": 67.49499158237712
+      "sloc": 114,
+      "maintainability": 64.59031048838443
     },
     "average": {
-      "sloc": 104,
-      "maintainability": "67.49"
+      "sloc": 114,
+      "maintainability": "64.59"
     }
   }
 }
